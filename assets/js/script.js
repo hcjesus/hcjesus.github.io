@@ -18,7 +18,7 @@ $(()=>{
 
 });
 
-const token = "79a0f5c1-04bc-4ad0-b631-ba0720975fb7";
+const token = "d539401c-abac-4092-bd79-8da478037652";
 const $formContact = document.querySelector("#contact");
 
 const sendForm = event => {
@@ -32,6 +32,7 @@ const sendForm = event => {
 };
 
 const smtpJS = message => {
+  console.log(message);
 	Email.send({
 	    SecureToken : token,
 	    To : 'cordero.susej@gmail.com',
