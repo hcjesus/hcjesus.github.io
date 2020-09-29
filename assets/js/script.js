@@ -18,6 +18,7 @@ $(()=>{
 
 });
 
+/*
 const token = "d539401c-abac-4092-bd79-8da478037652";
 const $formContact = document.querySelector("#contact");
 
@@ -43,7 +44,7 @@ const smtpJS = message => {
 	  messagea => alert(messagea)
 	);
 }
-
+*/
 /*
 const smtpJS = message => {
   try {
@@ -60,7 +61,7 @@ const smtpJS = message => {
   }
 };
 */
-$formContact.addEventListener("submit", sendForm);
+//$formContact.addEventListener("submit", sendForm);
 
 
 /*
