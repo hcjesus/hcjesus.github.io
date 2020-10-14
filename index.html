@@ -15,6 +15,11 @@
 
   </head>
   <body data-spy="scroll" data-target="#navegacion" data-offset="1">
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" id="toast"  data-autohide="true" data-delay="4000">      
+      <div class="toast-body">        
+        
+      </div>
+    </div>
     <div class="inicio">
       <div id="particles-js">
         <section id="top" class="one">
@@ -86,7 +91,7 @@
                     </div>
                   </a>
                 </li>
-                <!--
+                
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">
                     <div class="row ">
@@ -99,7 +104,7 @@
                     </div>
                   </a>
                 </li>
-                -->
+              
               </ul>
             </nav>
           </div>          
@@ -335,42 +340,42 @@
                 </div>
               </div>
             </div>
-            <!--
+            
             <div class="section five" id="contact">
               <div class="container">
                 <h1 class="title">Contacto</h1>
                 <div class="line"></div>
                 <p class="text-center">¿Tienes alguna pregunta? No dudes en contactarme.</p>
                 <div class="container">
-                  <form id="contact" class="form fomulario">
+                  <form id="formcontact" class="form fomulario" method="POST" >
                     <div class="row">
                       <div class="form-group col-md-6">
                         <div class="text-left">
                           <label class="" ><b>Nombre:</b></label>
                         </div>
-                        <input id="nombre" class="form-control" type="text">
+                        <input id="nombre" class="form-control" type="text" required>
                       </div>
                       <div class="form-group col-md-6">
                         <div class="text-left">
                           <label  class="form-control-label  "><b>Correo:</b></label>
                         </div>
-                        <input id="correo" class="form-control" type="text">
+                        <input id="correo" class="form-control" type="text" required>
                       </div>
                     </div>
                     <div class="form-group ">
                       <div class="text-left">
                         <label class="form-control-label "><b>Mensaje:</b></label>
                       </div>
-                      <textarea id="mensaje" class="form-control" rows="6" ></textarea>
+                      <textarea id="mensaje" class="form-control" rows="6" required></textarea>
                     </div>
                     <div class="container" id="submit">
-                      <input type="submit" class="btn btn-outline-light " name="" value="Enviar">
+                      <input type="submit"  class="btn btn-outline-light " name="" value="Enviar">
                     </div>
                     
                   </form>
                 </div>
               </div>
-            </div> -->
+            </div> 
 
 
           </div>

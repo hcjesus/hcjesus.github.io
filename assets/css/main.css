@@ -21,6 +21,20 @@ html, body {
   background-color: #e6e6e6 !important;
   z-index: -1; }
 
+.toast {
+  display: none;
+  background-color: #ab003c;
+  color: #f7f7f7;
+  text-align: center;
+  top: 5%;
+  left: 40%;
+  position: fixed;
+  z-index: 9999; }
+
+.shows {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 3s; }
+
 .inicio {
   height: 100vh;
   width: auto;
@@ -299,5 +313,19 @@ html, body {
 
   .three .skill {
     padding: 10px 15px 10px 15px !important; } }
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
 
 /*# sourceMappingURL=main.css.map */

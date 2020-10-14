@@ -14,37 +14,70 @@ $(()=>{
 		}
 	});
 
-	
-
+	document.querySelector("#formcontact").addEventListener('submit',validar);
+  
 });
 
-/*
-const token = "d539401c-abac-4092-bd79-8da478037652";
-const $formContact = document.querySelector("#contact");
 
-const sendForm = event => {
-  event.preventDefault();
+
+const token = "e4cf9de7-50ca-4a58-ba92-fc88718e7767";
+
+const sendForm = () => {
+  
   const message = {
     name: document.querySelector("#nombre").value,
     subject: document.querySelector("#correo").value,
     text: document.querySelector("#mensaje").value
   };
+  //toast();
   smtpJS(message);
 };
 
 const smtpJS = message => {
-  console.log(message);
 	Email.send({
 	    SecureToken : token,
-	    To : 'cordero.susej@gmail.com',
-	    From : `${message.subject}`,
-	    Subject : `Contacto - ${message.name}`,
-	    Body : `${message.text}`
+	    To : 'contacto.susej@gmail.com',
+	    From : 'contacto.susej@gmail.com',
+	    Subject : `${message.name}`,
+	    Body : `Name: ${message.name} <br> Email: ${message.subject} <br> Message: ${message.text} `
 	}).then(
-	  messagea => alert(messagea)
+    //messagea => alert(messagea),
+    toast(),
+    document.getElementById("formcontact").reset()
+
 	);
 }
-*/
+
+const toast = () =>{
+  document.getElementById('toast').setAttribute('style','background-color:#99cc33; color:#3d5114;') ;
+  $('.toast-body').html('<i class="far fa-check-circle fa-x4"><span class="msj"> Mensaje enviado.</span></i>');
+  $('.toast').toast('show');
+  //const t = document.getElementsByClassName("toast");
+  //t[0].classList.add('show');
+  //setTimeout(() =>{
+    //t[0].classList.remove("show");
+  //},3000);
+}
+
+const validar = event =>{
+  event.preventDefault();
+  const correo = document.getElementById('correo').value;
+  const expresion = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
+  //<i class="far fa-times-circle"></i>
+  if(expresion.test(correo)){
+    sendForm();
+  }else{
+    document.getElementById('toast').setAttribute('style','background-color:#ffcc00; color:#997a00;') ;
+    $('.toast-body').html('<i class="fas fa-exclamation-circle"> <span class="msj"> Verificar email.</span></i>');
+    $('.toast').toast('show');
+
+  }
+  
+}
+
+
+
+
 /*
 const smtpJS = message => {
   try {
@@ -63,12 +96,6 @@ const smtpJS = message => {
 */
 //$formContact.addEventListener("submit", sendForm);
 
-
-/*
-
-
-
-*/
 
 particlesJS('particles-js',
   
